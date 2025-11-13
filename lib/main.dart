@@ -132,6 +132,19 @@ class _LandingPageState extends State<LandingPage>
                               child: Image.asset(
                                 'assets/AppIconn.png',
                                 fit: BoxFit.cover,
+                                errorBuilder: (context, error, stackTrace) {
+                                  return Container(
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(30),
+                                    ),
+                                    child: Icon(
+                                      Icons.work,
+                                      size: 60,
+                                      color: const Color(0xff260273),
+                                    ),
+                                  );
+                                },
                               ),
                             ),
                           ),
